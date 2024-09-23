@@ -2,11 +2,14 @@
 
 import { revalidatePath } from "next/cache";
 
-const API_URL = "https://66d8f0e94ad2f6b8ed530881.mockapi.io/todos";
+// const API_URL = "https://66d8f0e94ad2f6b8ed530881.mockapi.io/todos";
+const API_URL = "http://localhost:8000/todos/";
 
 export async function getTodos() {
   return fetch(API_URL).then(
     (res) => res.json()
+  ).catch(
+    (error) => console.error('Error:', error)
   );
 }
 
