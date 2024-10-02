@@ -25,13 +25,14 @@ const Search = () => {
 }
 
 const TodoList = async () => {
-  const todos = await getTodos();
+  const data = await getTodos();
+  console.log(data);
   return (
     <div>
       <ul>
-        {todos && todos.map((todo: {id: string, title: string}) => (
+        {/* {todos && todos.map((todo: {id: string, title: string}) => (
           <li key={todo.id}>{todo.title}</li>
-        ))}
+        ))} */}
       </ul>
     </div>
   );
